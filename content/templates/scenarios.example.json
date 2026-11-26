@@ -1,0 +1,54 @@
+[
+  {
+    "slug": "example-scenario",
+    "title": "Example (replace)",
+    "pillar": "case",
+    "brief": "One paragraph setting the scene.",
+    "dimensions": [
+      "ethics",
+      "communication"
+    ],
+    "difficulty": 1,
+    "minutes": 10,
+    "nodes": [
+      {
+        "key": "start",
+        "text": "The situation.",
+        "choices": [
+          {
+            "label": "Option A",
+            "next": "end_a",
+            "consequence": "What happens.",
+            "scores": {
+              "ethics": 2
+            }
+          },
+          {
+            "label": "Option B",
+            "next": "end_b",
+            "consequence": "What happens.",
+            "scores": {
+              "ethics": -1
+            }
+          }
+        ]
+      },
+      {
+        "key": "end_a",
+        "text": "Outcome A",
+        "end": true,
+        "debrief": "What this teaches, sourced."
+      },
+      {
+        "key": "end_b",
+        "text": "Outcome B",
+        "end": true,
+        "debrief": "What this teaches, sourced."
+      }
+    ],
+    "source_url": "https://example.org/replace-me",
+    "source_title": "Replace",
+    "source_publisher": "Replace",
+    "source_kind": "official"
+  }
+]

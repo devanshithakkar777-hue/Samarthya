@@ -1,0 +1,142 @@
+1 | Acharya | Acharya
+2 | Alankar | Alankar
+3 | AMBS | Ayurvedacharya Bachelor of Medicine & Surgery
+4 | Anu Parangat | M.Phil
+5 | Ayurveda Vachaspati | Ph.D. In Ayurveda
+6 | Ayurvedacharya | Ayurvedacharya
+7 | B. Arch. | Bachelor of Architecture
+8 | B.A. B.Ed. | Bachelor of Arts and Bachelor of Education
+9 | B.Agri. | Bachelor of Agriculture
+10 | B.Ch.E. | Bachelor of Chemical Engg.
+11 | B.Chem. Tech | Bachelor of Chemical Technology
+12 | B.com | Bachelor of Commerce
+13 | B.Com. B.Ed | Bachelor of Commerce and Bachelor of Education
+14 | B.Dance | Bachelor of Dance
+15 | B.Ed | Bachelor of Education
+16 | B.Pharm (Ayu.) | Bachelor of Ayurved in Pharmacy
+17 | B.Pharm. | Bachelor of Pharmacy
+18 | B.S.Sc. | Bachelor of Sanitary Science
+19 | B.Sc. | Bachelor of Science
+20 | B.Sc. B.Ed. | Bachelor of Science and Bachelor of Education
+21 | B.Sc.(Nursing) | Bachelor of Science in Nursing
+22 | B.Sc.(Sericulture) | Bachelor of Science in Sericulture
+23 | B.Stat. | Bachelor of Statistics
+24 | B.Tech. | Bachelor of Technology
+25 | B.Tel.E. | Bachelor of Telecommunication Engg.
+26 | B.Text | Bachelor of Textiles
+27 | B.V.Sc. | Bachelor of Veterinary Science
+28 | B.V.Sc. & A.H | Bachelor of Veterinary Science and Animal Husbandry
+29 | BA | Bachelor of Arts
+30 | B. Lib. Sc. | Bachelor of Library Science
+31 | BAM | Bachelor of Ayurvedic Medicine
+32 | BAMS | Bachelor of Ayurvedic Medicine & Surgery
+33 | BBA | Bachelor of Business Administration
+34 | BBM | Bachelor of Business Management
+35 | BCA | Bachelor of Computer Applications
+36 | BCE | Bachelor of Civil Engineering
+37 | BCL | Bachelor of Civil Law
+38 | BDS | Bachelor of Dental Surgery
+39 | BE | Bachelor of Engineering
+40 | BEE | Bachelor of Electrical Engg.
+41 | BFA | Bachelor of Fine Arts
+42 | BFSc. | Bachelor of Fisheries Science
+43 | BGL | Bachelor of General Law
+44 | Bhasha Parveena | Bhasha Parveena
+45 | BHMS | Bachelor of Homeopathic Medicine & Surgery
+46 | BIM | Bachelor of Indian Medicine
+47 | BJ | Bachelor of Journalism
+48 | BL | Bachelor of Law or Laws
+49 | B.Lib.I.Sc. | Bachelor of Library and information Science
+50 | B.Litt. | Bachelor of Literature
+51 | BMBS | Bachelor of Medicine and Bachelor of Surgery
+52 | BME | Bachelor of Mechanical Engineering
+53 | B.Mus | Bachelor of Music
+54 | B.Nat (Ayu) | Bachelor of Ayurved in Naturopathy
+55 | B.Nurs. | Bachelor of Nursing
+56 | BOL | Bachelor of Oriental Learning
+57 | BOT | Bachelor of Occupational Therapy
+58 | BPA | Bachelor of Performing Arts
+59 | BPED | Bachelor of Physical Education
+60 | B.P.E. | Bachelor of Physical Education
+61 | BPP | Bachelor of Physical Planning
+62 | BPS | Bachelor of Professional Studies
+63 | BPT | Bachelor of Physiotherapy
+64 | BSMS | Bachelor of Sridhar Medicine & Surgery
+65 | BSW | Bachelor of Social Work
+66 | BT | Bachelor of Training
+67 | D.Ay. M. | Doctor of Ayurvedic Medicine
+68 | D.Ed. | Doctor of Education
+69 | D.Eng. | Doctor of Engineering
+70 | D.HV. | Doctor of Hygiene
+71 | D.Litt. | Doctor of Literature
+72 | D.Mus. | Doctor of Music
+73 | Ph.D. | Doctor of Philosophy
+74 | D.Sc. | Doctor of Science
+75 | DL | Doctor of Law
+76 | D.M. | Doctor of Medicine (in Cardiology)
+77 | DOL | Doctor of Oriental Learning
+78 | Granthalaya | Granthalaya
+79 | Hindi Shiksha Visharad | Hindi Shiksha Visharad
+80 | LLB | Bachelor of Law or Laws
+81 | LLD | Doctor of Laws
+82 | LLM | Master of Law or Laws
+83 | M.Arch. | Master of Architecture
+84 | M.Ch. | Master of Chirurgiae
+85 | M.Ch.E. | Master of Chemical Engg.
+86 | M.Com | Master of Commerce
+87 | M.Dance | Master of Dance
+88 | M.Ed. | Master of Education
+89 | M.Ind. | Master of Indology
+90 | M.Lib.Sc. | Master of Library Science
+91 | M.Litt | Master of Literature or Master of Letters
+92 | M.Mus | Master of Music
+93 | M.Pharm. | Master of Pharmacy
+94 | M.Phil | Master of Philosophy
+95 | M.Plan | Master of Planning
+96 | MPE | Master of Physical Education
+97 | M.Sc. | Master of Science
+98 | M.Stat. | Master of Statistics
+99 | M.Tech. | Master of Technology
+100 | M.Text | Master of Textiles
+101 | M.V.Sc. | Master of Veterinary Sciences
+102 | MA | Master of Arts
+103 | MBA | Master of Business Administration
+104 | MBBS | Bachelor of Medicine and Bachelor of Surgery
+105 | MCA | Master of Computer Applications
+106 | M.D. | Doctor of Medicine
+107 | MDS | Master of Dental Surgery
+108 | ME | Master of Engineering
+109 | MEE | Master of Electrical Engineering
+110 | MF.Sc. | Master of Fishery Science
+111 | MFA | Master of Fine Arts
+112 | MJ | Master of Journalism
+113 | ML | Master of Laws
+114 | MLISc. | Master of Library and Information Science
+115 | MME | Master of Mechanical Engineering
+116 | MO | Master of Obstetrics or Master of Obstetrics and Gynecology
+117 | MOL | Master of Oriental Learning
+118 | MPEd. | Master of Physical Education
+119 | MPA | Master of Performing Arts
+120 | MPS | Master of Population Studies
+121 | MPT | Master of Physiotherapy
+122 | MS | Master of Surgery
+123 | MAMS | Master of Ayurved in Medicine and Surgery
+124 | MSW | Master of Social Work
+125 | MUMS | Master of Unani Medicine & Surgery
+126 | Parangat | Parangat
+127 | D. Phil. | Doctor of Philosophy
+128 | Samaj Karya Parangat | Samaj Karya Parangat
+129 | Samaj Vidya Parangat | Samaj Vidya Parangat
+130 | Samaj Vidya Visharad | Samaj Vidya Visharad
+131 | Shastri | Shastri
+132 | Shiksha Acharya | Shiksha Acharya
+133 | Shikshan Parangat | Shikshan Parangat
+134 | Shiksha Shastri | Shiksha shastri
+135 | Shiksha Visharad | Shiksha Visharad
+136 | Vachaspati | Vachaspati
+137 | Vidya Nishnanat | Vidya Nishnanat
+138 | Vidya Praveena | Vidya Praveena
+139 | Vidya Vachaspati | Vidya Vachaspati
+140 | Vidya Varidhi | Vidya Varidhi
+141 | Vidyalankar | Vidyalankar
+142 | Visharad | Visharad

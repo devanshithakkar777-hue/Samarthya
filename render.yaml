@@ -1,0 +1,44 @@
+# Render Blueprint for the Samarthya pilot: two web services. The database lives on Neon (not defined here).
+# Nothing is created until you connect this repo in Render and apply the Blueprint. See DEPLOY.md.
+# Every value marked `sync: false` is typed into the Render dashboard by you; none is stored in this repo.
+services:
+  - type: web
+    name: samarthya-api
+    runtime: docker
+    dockerContext: ./apps/api
+    dockerfilePath: ./apps/api/Dockerfile
+    region: singapore          # keep the API, the web service and the Neon project in the same region
+    plan: free                 # free instances sleep after ~15 idle minutes; change to starter for always-on
+    healthCheckPath: /healthz  # liveness only: does not touch the database, so checks never wake Neon
+    autoDeploy: true
+    envVars:
+      - { key: ENV, value: prod }
+      - { key: RUN_MIGRATIONS, value: "1" }        # runs `alembic upgrade head` on start; single instance only
+      - { key: LOG_LEVEL, value: INFO }
+      - { key: TRUSTED_PROXY_HOPS, value: "1" }    # see DEPLOY.md, "Rate limiting"
+      - { key: JWT_SECRET, generateValue: true }   # Render generates a random secret; never commit one
+      - { key: JOURNAL_KEY, generateValue: true }  # encrypts private journals. BACK THIS UP: losing it makes every journal entry unreadable. Never rotate without a migration
+      - { key: DATABASE_URL, sync: false }         # Neon POOLED string (host contains -pooler)
+      - { key: DIRECT_DATABASE_URL, sync: false }  # Neon DIRECT string, used only for migrations
+      - { key: CORS_ORIGINS, sync: false }         # the web service's public https URL, no trailing slash
+      - { key: SMTP_HOST, sync: false }
+      - { key: SMTP_PORT, value: "587" }
+      - { key: SMTP_USER, sync: false }
+      - { key: SMTP_PASSWORD, sync: false }
+      - { key: MAIL_FROM, sync: false }
+      - { key: ADMIN_BOOTSTRAP_EMAIL, sync: false }  # optional; see DEPLOY.md
+      # Optional AI companion. Off unless all three are set; add them yourself once you hold a real key.
+      # - LLM_PROVIDER, LLM_API_KEY, LLM_MODEL, LLM_DAILY_LIMIT (see DEPLOY.md)
+
+  - type: web
+    name: samarthya-web
+    runtime: docker
+    dockerContext: ./apps/web
+    dockerfilePath: ./apps/web/Dockerfile
+    region: singapore
+    plan: free
+    healthCheckPath: /healthz   # static answer; does not call the API or database
+    autoDeploy: true
+    envVars:
+      - { key: API_URL, sync: false }    # the API service's public https URL, no trailing slash
+      - { key: SITE_URL, sync: false }   # this web service's public https URL (or your custom domain)

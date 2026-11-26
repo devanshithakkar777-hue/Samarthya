@@ -1,0 +1,36 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  api:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env: { POSTGRES_USER: samarthya, POSTGRES_PASSWORD: samarthya, POSTGRES_DB: samarthya_test }
+        ports: ["5432:5432"]
+        options: --health-cmd "pg_isready -U samarthya" --health-interval 5s --health-retries 10
+    defaults: { run: { working-directory: apps/api } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.13" }
+      - run: pip install -e ".[dev]"
+      - run: pytest -q
+  web:
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: apps/web } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 24, cache: npm, cache-dependency-path: apps/web/package-lock.json }
+      - run: npm ci
+      - run: npm test
+      - run: npm run typecheck
+      - run: npm run build
+      - name: Accessibility and low-data checks
+        run: |
+          pip install playwright && python -m playwright install --with-deps chromium
+          cp -r .next/static .next/standalone/.next/static
+          (cd .next/standalone && PORT=3000 API_URL=http://localhost:8000 node server.js &) ; sleep 4
+          python scripts/budget_check.py http://localhost:3000
+          python scripts/a11y_check.py http://localhost:3000

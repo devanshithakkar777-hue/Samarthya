@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@import "./tokens.css";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Noto Sans Devanagari",
+    "Noto Sans", "Nirmala UI", sans-serif;
+  --font-display: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Noto Sans Devanagari", sans-serif;
+}
+
+html { scroll-behavior: smooth; color-scheme: light; }
+body { background: var(--color-arctic-white); color: var(--color-ink); font-family: var(--font-sans); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important; }
+}
+
+:focus-visible { outline: 3px solid var(--color-electric-blue); outline-offset: 3px; border-radius: 4px; }
+.on-dark :focus-visible { outline-color: var(--color-cyan); }
+
+.skip-link { position: absolute; left: 8px; top: -48px; z-index: 100; background: var(--color-deep-space);
+  color: var(--color-arctic-white); padding: 10px 14px; border-radius: 8px; }
+.skip-link:focus { top: 8px; }
+
+@keyframes drift { from { transform: translate3d(0,0,0); } to { transform: translate3d(0,-14px,0); } }
+@keyframes pathflow { to { stroke-dashoffset: -40; } }
